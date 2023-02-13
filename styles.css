@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --min-height-settingList: 24px;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #3c87ff;
+    /* background: radial-gradient(circle, rgba(253,47,173,1) 0%, rgba(195,0,118,1) 50%, rgba(56,0,32,1) 100%); */
+}
+
+.main {
+    max-width: 400px;
+    background-color: #fff;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.taskInput {
+    padding: 18px 25px;
+    position: relative;
+}
+
+.taskInput input {
+    padding: 14px 0px 14px 40px;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.taskInput input::placeholder {
+    color: #bfbfbf;
+    padding: 0 6px;
+}
+
+.inputImg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 36px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0 25px 18px 25px;
+}
+
+.btnClear {
+    padding: 6px 10px;
+    background-color: #3c87ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filters {
+}
+
+.filters span {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 16px;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: #3c87ff;
+    font-weight: 600;
+}
+
+.listItems {
+    padding: 18px 25px;
+    list-style: none;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.listItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.listItem label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItem label input {
+    margin-right: 8px;
+}
+
+.listItem label p.checked {
+    text-decoration: line-through;
+}
+
+.setting {
+    position: relative;
+}
+
+.setting .settingList.show {
+    /* display: block; */
+    transform: scale(1);
+}
+
+.settingList {
+    /* display: none; */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    list-style: none;
+    z-index: 1;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: top right;
+}
+
+.settingItem {
+    min-height: var(--min-height-settingList);
+    font-size: 16px;
+    padding: 6px 8px;
+}
+
+.settingItem:hover {
+    cursor: pointer;
+    background-color: #dadada;
+}
+
+.settingItem i {
+    padding: 4px 0;
+    margin-right: 8px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/68bd216c54.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <div class="main">
+        <div class="taskInput">
+            <img src="./menu.png" alt="icon" class="inputImg">
+            <input type="text" placeholder="Add new task">
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="btnClear">Clear All</button>
+        </div>
+        <ul class="listItems">
+            <!-- <li class="listItem">
+                <label for="1">
+                    <input onclick="updateStatus(this)" type="checkbox" id="1">
+                    <p>Task 1</p>
+                </label>
+                <div class="setting">
+                    <i class="uil uil-ellipsis-h"></i>
+                    <ul class="settingList">
+                        <li class="settingItem"><i class="uil uil-pen"></i>Edit</li>
+                        <li class="settingItem"><i class="uil uil-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    <script src="./app.js">
+        
+    </script>
+</body>
+</html>
